@@ -27,3 +27,4 @@ add_executable (${TARGET_EXE_NAME}
 )
 target_link_libraries (${TARGET_EXE_NAME} ${LIBS})
 
+#set (CMAKE_ECLIPSE_VERSION Kepler)
