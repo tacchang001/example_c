@@ -16,6 +16,6 @@ int statvfs(const char *path, struct statvfs *buf) {
     mock_c()->actualCall("statvfs")
             ->withOutputParameterOfType("StatvfsBuf", "buf", buf);
 
-    return 0;
+    return mock_c()->intReturnValue();
 }
 

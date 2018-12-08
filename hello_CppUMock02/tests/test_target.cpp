@@ -37,20 +37,24 @@ public:
 // テストを実行するメソッド
 TEST(TestFuncGroup, Test1)
 {
+    #define EXPECT_BLOCKS   12345
+    #define EXPECT_BAVAIL   67890
+
     //http://www.fancy.mydns.jp/modules/weblog/index.php?cat_id=13&start=10
 
     /* setup */
     StatvfsCopier copier;
     mock().installCopier("StatvfsBuf", copier);
     struct statvfs out;
-    out.f_blocks = 1;
-    out.f_bavail = 10;
+    out.f_blocks = EXPECT_BLOCKS;
+    out.f_bavail = EXPECT_BAVAIL;
     mock().expectOneCall("statvfs")
-            .withOutputParameterOfTypeReturning("StatvfsBuf", "buf", &out);
+            .withOutputParameterOfTypeReturning("StatvfsBuf", "buf", &out)
+            .andReturnValue(0);
 
     /* test */
     ulong ds = get_disk_space(".");
-    CHECK_EQUAL(10, ds);
+    CHECK_EQUAL(EXPECT_BLOCKS*EXPECT_BAVAIL, ds);
 }
 
 int main(int argc, char **argv) {

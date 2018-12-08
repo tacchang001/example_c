@@ -20,12 +20,15 @@ TEST_GROUP(TestFuncGroup) {
     }
 };
 
+#define EXPECT_BLOCKS   12345
+#define EXPECT_BAVAIL   67890
+
 int statvfs(const char *path, struct statvfs *buf) {
 
     mock().actualCall("statvfs");
 
-    buf->f_blocks = 1;
-    buf->f_bavail = 10;
+    buf->f_blocks = EXPECT_BLOCKS;
+    buf->f_bavail = EXPECT_BAVAIL;
 
     return 0;
 }
@@ -35,7 +38,7 @@ TEST(TestFuncGroup, Test1)
 {
     mock().expectOneCall("statvfs");
     ulong ds = get_disk_space(".");
-    CHECK_EQUAL(10, ds);
+    CHECK_EQUAL(EXPECT_BLOCKS*EXPECT_BAVAIL, ds);
 }
 
 int main(int argc, char **argv) {
