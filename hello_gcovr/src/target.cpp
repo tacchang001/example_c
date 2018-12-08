@@ -10,7 +10,7 @@ int target_function(const int a, const int b)
         if ((b < 0) || (b > 100)) {
             ans = a - b;
         } else {
-            ans = a * b;
+            ans = a + b;
         }
     }
 

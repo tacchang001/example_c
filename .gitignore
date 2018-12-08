@@ -3,6 +3,9 @@
 cmake-build-debug/
 *.log
 
+# Python
+python_venv/
+
 # Prerequisites
 *.d
 

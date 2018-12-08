@@ -12,3 +12,6 @@ if(COMPILE_TESTS)
     add_subdirectory(tests)
 endif(COMPILE_TESTS)
 
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/../cmake_modules)
+include (gcovr)
+
