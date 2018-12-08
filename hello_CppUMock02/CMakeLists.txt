@@ -1,5 +1,5 @@
 # (1) CMake definitions, compiler flags and useful variables
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12)
 project(hello_CppUTest)
 
 # add_compile_options(-Wall -Werror)
