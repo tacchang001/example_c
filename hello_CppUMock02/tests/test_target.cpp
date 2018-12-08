@@ -40,8 +40,6 @@ TEST(TestFuncGroup, Test1)
     #define EXPECT_BLOCKS   12345
     #define EXPECT_BAVAIL   67890
 
-    //http://www.fancy.mydns.jp/modules/weblog/index.php?cat_id=13&start=10
-
     /* setup */
     StatvfsCopier copier;
     mock().installCopier("StatvfsBuf", copier);

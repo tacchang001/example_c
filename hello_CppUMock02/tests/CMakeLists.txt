@@ -10,10 +10,14 @@ set(TEST_SOURCES
         statvfs-mock.c
         )
 
-add_compile_options(-Wall -Wno-unused-function)
+add_compile_options(
+        -Wall -Wno-unused-function
+        )
 
 # (3) Take care of include directories
-include_directories(${CPPUTEST_INCLUDE_DIRS} ../include)
+include_directories(${CPPUTEST_INCLUDE_DIRS}
+        ../include
+        )
 link_directories(${CPPUTEST_LIBRARIES})
 
 # (4) Build the unit tests objects and link then with the app library
