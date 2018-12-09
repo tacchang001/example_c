@@ -1,13 +1,12 @@
-# (1) Build a library with my application sources
-set(APP_LIB_SOURCE
+set(LIB_SOURCE
         target.cpp
         )
 
+add_library(${LIB_NAME}
+        ${LIB_SOURCE})
+
 set(INCLUDE_DIR ../include)
 
-add_library(${APP_LIB_NAME} ${APP_LIB_SOURCE})
-
-target_include_directories(
-        ${APP_LIB_NAME}
+target_include_directories(${LIB_NAME}
         PUBLIC ${INCLUDE_DIR}
 )
