@@ -2,7 +2,7 @@
  *
  */
 
-#include "target.h"
+#include "IBar.h"
 
 Addition::Addition(Calculator *aCalc) {
     calc = aCalc;

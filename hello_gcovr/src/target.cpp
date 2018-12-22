@@ -1,4 +1,4 @@
-#include "target.h"
+#include "IBar.h"
 
 int target_function(const int a, const int b)
 {

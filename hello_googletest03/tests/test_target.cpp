@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/31989040/can-gmock-be-used-for-stubbing-c-functions
 
-#include "target.h"
+#include "IBar.h"
 
 #include <memory>
 #include "gtest/gtest.h"

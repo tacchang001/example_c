@@ -5,7 +5,7 @@
 #include "CppUTest/CommandLineTestRunner.h"
 #include "CppUTestExt/MockSupport.h"
 #include <sys/statvfs.h>
-#include "target.h"
+#include "IBar.h"
 
 // テストグループを定義
 TEST_GROUP(TestFuncGroup) {

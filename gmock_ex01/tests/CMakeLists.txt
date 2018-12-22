@@ -1,14 +1,15 @@
+# https://stackoverrun.com/ja/q/11153736
 find_package(PkgConfig)
 pkg_check_modules(GTEST gtest>=1.7.0 REQUIRED)
 pkg_check_modules(GMOCK gmock>=1.7.0 REQUIRED)
 
 set(TEST_APP_NAME ${LIB_NAME}_tests)
 set(TEST_SOURCES
-        test_target.cpp
+        TestFoo.cpp
         )
 
 add_compile_options(
-        -std=gnu++11 -Wall -Wno-unused-function
+        -std=gnu++14 -Wall -Wno-unused-function
 )
 
 include_directories(

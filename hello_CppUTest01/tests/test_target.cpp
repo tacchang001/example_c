@@ -4,7 +4,7 @@
 
 #include "CppUTest/CommandLineTestRunner.h"
 #include "CppUTestExt/MockSupport.h"
-#include "target.h"
+#include "IBar.h"
 #include "calculator-mock.h"
 
 TEST_GROUP(TestFuncGroup) {

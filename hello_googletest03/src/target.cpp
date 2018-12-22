@@ -2,7 +2,7 @@
  *
  */
 
-#include "target.h"
+#include "IBar.h"
 
 int inits(void){
     return bcm2835_init();
