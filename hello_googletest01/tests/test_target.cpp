@@ -3,7 +3,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "IBar.h"
+#include "target.h"
 
 /*
  * 簡単なテスト

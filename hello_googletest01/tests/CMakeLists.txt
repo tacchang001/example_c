@@ -15,8 +15,6 @@ include_directories(${CPPUTEST_INCLUDE_DIRS}
         ../include
         )
 
-link_directories(${GTEST_LIBRARIES})
-
 add_executable(${TEST_APP_NAME} ${TEST_SOURCES})
 
 target_link_libraries(${TEST_APP_NAME} ${LIB_NAME} ${GTEST_LDFLAGS} gtest_main)
